@@ -1,8 +1,8 @@
 package br.com.tarefa_02.controller;
 
-import br.com.tarefa_02.Selecao_Agente_do_Valorant.Agente;
-import br.com.tarefa_02.Selecao_Agente_do_Valorant.AgenteDados;
-import br.com.tarefa_02.Selecao_Agente_do_Valorant.Selecao;
+import br.com.tarefa_02.model.selecaoAgentesValorant.Agente;
+import br.com.tarefa_02.model.selecaoAgentesValorant.AgenteDados;
+import br.com.tarefa_02.model.selecaoAgentesValorant.Selecao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +14,12 @@ import java.util.List;
 @Controller
 @RequestMapping
 public class HomeController {
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/pg1")
     public String pg1() {
         return "pg1";
@@ -44,7 +50,31 @@ public class HomeController {
         model.addAttribute("caminhoImgDoMapa", caminhoMapa);
         model.addAttribute("caminhoImgDoAgente", caminhoAgente);
         model.addAttribute("porcentagemDeVitoria", porcentagemDeVitoria);
+        model.addAttribute("agenteFuncao", funcao);
 
         return "pg3";
+    }
+
+    @GetMapping("/agente={nomeDoAgente}")
+    public String p4(@PathVariable String nomeDoAgente, ModelMap model){
+        //Carregando os dados dos Agentes cadastrados no AgenteDados.java
+        List<Agente> agentes = AgenteDados.getDadosAgentes();
+
+        //Selecionando os Dados dos Agentes
+        Selecao novaSelecao = new Selecao(agentes);
+
+        //Preciso do Nome, Função e a Biografia
+        String agenteSelecionado = nomeDoAgente;
+        String agenteFuncao = novaSelecao.selecionarFuncao(agenteSelecionado);
+        String agenteBiografia = novaSelecao.selecionarBiografia(agenteSelecionado);
+        String caminhoAgente = novaSelecao.selecionarCaminhoDoAgente(agenteSelecionado);
+
+
+        model.addAttribute("agenteSelecionado", agenteSelecionado);
+        model.addAttribute("agenteFuncao", agenteFuncao);
+        model.addAttribute("agenteBiografia", agenteBiografia);
+        model.addAttribute("caminhoImgDoAgente", caminhoAgente);
+
+        return "pg4";
     }
 }

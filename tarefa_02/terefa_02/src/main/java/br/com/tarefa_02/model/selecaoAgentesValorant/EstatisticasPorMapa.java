@@ -1,4 +1,4 @@
-package br.com.tarefa_02.Selecao_Agente_do_Valorant;
+package br.com.tarefa_02.model.selecaoAgentesValorant;
 public class EstatisticasPorMapa {
     private String mapa;
     private double porcentagemDeVitoria;

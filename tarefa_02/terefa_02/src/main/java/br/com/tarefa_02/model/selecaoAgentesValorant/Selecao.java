@@ -1,4 +1,4 @@
-package br.com.tarefa_02.Selecao_Agente_do_Valorant;
+package br.com.tarefa_02.model.selecaoAgentesValorant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,10 @@ public class Selecao {
     public Selecao(String funcao, String mapa, List<Agente> agenteList) {
         this.funcao = funcao;
         this.mapa = mapa;
+        this.agenteList = agenteList;
+    }
+
+    public Selecao(List<Agente> agenteList) {
         this.agenteList = agenteList;
     }
 
@@ -43,6 +47,17 @@ public class Selecao {
             }
         }
         return filtrarPorMapaEFuncao;
+    }
+
+    public Agente filtrarPorNome(String nome) {
+        if (!agenteList.isEmpty()) {
+            for (Agente a : agenteList) {
+                if (a.getNome().equalsIgnoreCase(nome)) {
+                    return a;
+                }
+            }
+        }
+        return null;
     }
 
 
@@ -97,6 +112,16 @@ public class Selecao {
             }
         }
         return biografia;
+    }
+
+    public String selecionarFuncao(String agente) {
+        Agente agenteSelecionado = filtrarPorNome(agente);
+
+        if (agenteSelecionado != null){
+            return agenteSelecionado.getFuncao();
+        } else {
+            return "Função não encontrada";
+        }
     }
 
 }

@@ -69,41 +69,24 @@ body {
     margin: -1rem 0 0 0;
 }
 
-.mapa-selecionado {
-    width: 25vh;
-    height: 25vh;
-    clip-path: circle(50% at 50% 50%);
-    object-fit: cover;
-    margin: 0;
-}
-
 .agente-selecionado {
     width: 60vh;
     margin: 3rem 15vh;
     position: relative;
     z-index: 2;
-    filter: blur(10px); 
-    animation: removerBlur 0.5s ease 0.5s forwards; 
+    filter: blur(10px);
+    animation: removerBlur 0.5s ease 0.5s forwards;
 }
 
 @keyframes removerBlur {
     0% {
-        filter: blur(10px); 
+        filter: blur(10px);
     }
     100% {
-        filter: blur(0); 
+        filter: blur(0);
     }
 }
 
-.winrate {
-    font-size: 7rem;
-    color: #ffae01;
-    margin: -2.45rem 0 -2.25rem 0;
-}
-
-.winrate span {
-    font-size: 50%;
-}
 
 .sub-informacoes {
     font-weight: 600;
@@ -124,10 +107,15 @@ body {
     .container {
         flex-direction: column;
         align-items: center;
+        min-height: 150vh;
     }
 
     .container-1 {
         margin: 2rem auto;
+    }
+
+    .container-2{
+        margin-top: 0;
     }
 
     .container-1 .sub-informacoes,
@@ -195,6 +183,7 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1200px){
     .container {
         flex-direction: column;
+        min-height: 150vh;
     }
 
     .titulo,
@@ -229,14 +218,6 @@ body {
         width: 100%;
         margin: 0 20rem 0 0;
         z-index: 2;
-    }
-
-
-    .winrate {
-        font-size: 7rem;
-        margin-left: 1.5rem;
-        color: #0f1923;
-
     }
 
     .sub-informacoes {
@@ -304,7 +285,7 @@ body {
         margin-left: 0;
         width: 15rem;
     }
-    
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -323,10 +304,6 @@ body {
     .agente-selecionado{
         width: 55vh;
         margin: 4rem 1rem 1rem 1rem;
-    }
-
-    .winrate{
-        font-size: 5rem;
     }
 
     .nome-do-agente{
