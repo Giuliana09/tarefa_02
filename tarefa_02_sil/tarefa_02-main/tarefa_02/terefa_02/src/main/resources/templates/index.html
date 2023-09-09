@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWIII - Tarefa 2</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+    <header>
+        <h1>Página Principal</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Integrantes do Grupo</h2>
+            <ul>
+                <li>Giuliana Gralha</li>
+                <li>Larissa Sousa</li>
+                <li>Silvana Menezes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Descrição do Projeto</h2>
+            <p>Esse projeto tem o objetivo de utilizar as rotas de uma aplicação Spring Boot
+                para coletar e processar dados, através da url do navegador.</p>
+        </section>
+
+        <section>
+            <h2>Rotas do Projeto</h2>
+
+            <section>
+                <article>
+                    <h2>Temática - Meu Player</h2>
+                    <div>
+                        <p>Às vezes, você quer dançar ao som de uma batida contagiante, e outras vezes, você quer apenas se envolver
+                            nas letras profundas de uma balada emotiva. A música é a trilha sonora da nossa vida e nos traz muitos benefícios:
+                        </p>
+                        <ul>
+                            <li> Estimula a criatividade</li>
+                            <li> Ajuda a relaxar</li>
+                            <li> Aumenta a concentração</li>
+                            <li> Diminui o estress</li>
+                        </ul>
+
+                        <p>Eu uso a música para tudo! Descansar, Festejar, Focar e por isso separei alguns ritmos que eu gosto
+                            aqui para você ouvir e me conhecer um pouco mais!
+                        </p>
+                        <p>Aproveite!</p>
+                    </div>
+                    <div>
+                        <h5>Tutorial:</h5>
+                        <ol>
+                            <li>
+                                <p>Digite na Barra de Busca:</p>
+                                <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                    <code style="color: black">localhost:6020/meuPlayer</code>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Pressione <strong>ENTER</strong></span>
+                            </li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article>
+                    <h2>Temática - Valorant</h2>
+                    <p>
+                        Valorant é um jogo de tiro em primeira pessoa (FPS) desenvolvido e publicado pela
+                        <a target="_blank" href="https://playvalorant.com/pt-br/">Riot Games.</a>
+                        Ele foi lançado em junho de 2020 e rapidamente se tornou um dos jogos mais populares no gênero.
+                    </p>
+
+                    <h4>Agentes - Valorant</h4>
+                    <p>
+                        Como todo jogo, Valorant também tem um universo cheio de histórias e conflitos.
+                        <br>Pensando nisso que tal conhecer um pouco mais desses Agentes?
+                    </p>
+
+                    <p>Confira abaixo as <b>listas de Agentes disponiveis:</b></p>
+
+                    <h5>Agentes</h5>
+                    <ul>
+                        <li>Brimstone</li>
+                        <li>Phoenix</li>
+                        <li>Sage</li>
+                        <li>Sova</li>
+                        <li>Viper</li>
+                        <li>Cypher</li>
+                        <li>Reyna</li>
+                        <li>Killjoy</li>
+                        <li>Breach</li>
+                        <li>Omen</li>
+                        <li>Jett</li>
+                        <li>Raze</li>
+                        <li>Skye</li>
+                        <li>Yoru</li>
+                        <li>Astra</li>
+                        <li>KAY/O</li>
+                        <li>Chamber</li>
+                        <li>Neon</li>
+                        <li>Fade</li>
+                        <li>Harbor</li>
+                        <li>Gekko</li>
+                        <li>Deadlock</li>
+                    </ul>
+
+
+                    <div class="jumbotron jumbotron-fluid" style="width: 60%;">
+                        <div class="container">
+                            <h5>Tutorial:</h5>
+                            <ol>
+                                <li>
+
+                                    <p>Digite na Barra de Busca:</p>
+                                    <p>
+                                    <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                        <code style="color: black">localhost:6020/agente=nomeDoAgente</code>
+                                    </div>
+                                    </p>
+
+                                    <p><i>Exemplo:</i>
+                                    <p/>
+                                    <p>
+                                        Para conhecer mais sobre o Gekko , digite:
+                                    <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                        <code style="color: black">localhost:6020/agente=gekko</code>
+                                    </div>
+                                    </p>
+
+                                </li>
+                                <li>Pressione <strong>ENTER</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <h4>Seleção de Agentes - Valorant</h4>
+                <p>
+                <h5>Quem nunca ficou indeciso(a) na hora de decidir qual agente, boneco, etc, escolher em um jogo?
+                </h5>
+                Pois é, eu tenho esse mesmo problema com o jogo de FPS da Riot Games Valorant, são TANTOS
+                Agentes que eu fico indecisa na hora de selecionar.
+                </p>
+
+                <p>
+                    Pensando nisso eu decidi criar uma aplicação web que me auxile nessa decisão, me <b>mostrando o
+                    agente mais selecionado</b> em todos os ranques e sua porcentagem de vitória.
+                </p>
+
+                <p>
+                    Com essa solução chega de indecisão na hora de selecionar um agente e bora pro play.<br>
+                    Confira abaixo as <b>listas de Mapas e Funções disponiveis:</b>
+                </p>
+
+                <h5>Mapas</h5>
+                <ol>
+                    <li>Lotus</li>
+                    <li>Pearl</li>
+                    <li>Fracture</li>
+                    <li>Bind</li>
+                    <li>Haven</li>
+                    <li>Split</li>
+                    <li>Ascent</li>
+                </ol>
+
+                <h5>Funções</h5>
+                <ol>
+                    <li>Duelista</li>
+                    <li>Sentinela</li>
+                    <li>Controlador</li>
+                    <li>Iniciador</li>
+                </ol>
+
+                <div class="jumbotron jumbotron-fluid" style="width: 50%;">
+                    <div class="container">
+                        <h5>Tutorial:</h5>
+                        <ol>
+                            <li>
+
+                                <p>Digite na Barra de Busca:</p>
+                                <p>
+                                <div class="alert alert-dark" role="alert" style="width: 50%;">
+                                    <code style="color: black">localhost:6020/funcao&amp;mapa</code>
+                                </div>
+                                </p>
+
+                                <p><i>Exemplo:</i>
+                                <p/>
+                                <p>
+                                    Para escolher um Controlador no mapa Split , digite:
+                                <div class="alert alert-dark" role="alert" style="width: 50%;">
+                                    <code style="color: black">localhost:6020/controlador&amp;split</code>
+                                </div>
+                                </p>
+
+
+                                <p><strong>Obs.:</strong>
+                                    Certifique-se de digitar corretamente os nomes de Função e Mapa por favor</p>
+                            </li>
+                            <li>Pressione <strong>ENTER</strong></li>
+                            <p>Dados retirados do site <a target="_blank" href="https://tracker.gg/valorant/">Tracker.gg</a>
+                        </ol>
+                    </div>
+                </div>
+                </article>
+            </section>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ManasCode. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="<http://www.thymeleaf.org>">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/selecaoAgente.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@200;500;700&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <title>Selecao de Agente</title>
+</head>
+<body>
+<div class="container">
+    <div class="container-1">
+        <h2 class="titulo">//Agente Selecionado</h2>
+        <h2 class="nome-do-agente" th:text="${agenteSelecionado}"></h2>
+        <h2 class="funcao" th:text="${agenteFuncao}"></h2>
+        <h3 class="sub-informacoes">//Mapa</h3>
+        <img class="mapa-selecionado" th:src="${caminhoImgDoMapa}" alt="Mapa selecionado">
+    </div>
+
+    <div class="container-2">
+        <img class="agente-selecionado" th:src="${caminhoImgDoAgente}" alt="Agente Selecionado">
+    </div>
+
+    <div class="container-3">
+        <h3 class="sub-informacoes tituloMobile">//Winrate</h3>
+        <p class="winrate" th:text="${porcentagemDeVitoria} + '%'"></p>
+        <h3 class="sub-informacoes">//Biografia</h3>
+        <p class="biografia" th:text="${agenteBiografia}"></p>
+    </div>
+</div>
+
+<div class="retangulo"></div>
+
+</body>
+</html>
