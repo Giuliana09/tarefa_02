@@ -20,10 +20,8 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/meuPlayer/{nomeDaMusica}")
-    public String meuPlayer(@PathVariable String nomeDaMusica, ModelMap model) {
-        String caminhoDaMusica = "./musicas/" + nomeDaMusica + ".mp3";
-        model.addAttribute("musicaSelecionada", caminhoDaMusica);
+    @GetMapping("/meuPlayer")
+    public String meuPlayer() {
         return "meuPlayer";}
 
     @GetMapping("/pg2")

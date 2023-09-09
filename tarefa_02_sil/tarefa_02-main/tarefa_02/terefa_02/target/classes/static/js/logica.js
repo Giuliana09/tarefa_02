@@ -10,7 +10,7 @@ const inicio = document.querySelector("#inicio");
 const duracao = document.querySelector("#duracao");
 
 //Importação das músicas
-import musicas from "static/js/musicas";
+import musicas from "./musicas.js";
 
 //Variáveis play e pause
 const iconBotaoPlay = "<i class='bx bx-play-circle'></i>";
@@ -18,22 +18,6 @@ const iconBotaoPause = "<i class='bx bx-pause-circle'></i>";
 
 //Variável para o index da música atual que irá percorrer a array de músicas
 let index = 0;
-
-// Obtendo o nome da música a partir da URL
-const url = window.location.pathname;
-const nomeDaMusica = url.substring(url.lastIndexOf('/') + 1);
-
-// Encontre a música correspondente com base no nome
-const musicaEncontrada = musicas.find(musica => musica.name === nomeDaMusica);
-
-if (musicaEncontrada) {
-    play.src = musicaEncontrada.src;
-    nomeMusica.innerHTML = musicaEncontrada.name;
-    playPause();
-    updateTime();
-} else {
-    console.error('Música não encontrada.');
-}
 
 //Chamando as funções para voltar ou avançar a música
 botaoAvancar.onclick = () => voltarAvancarMusica("prev");
