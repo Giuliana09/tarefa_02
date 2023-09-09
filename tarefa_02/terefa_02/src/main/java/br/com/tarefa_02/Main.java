@@ -11,10 +11,6 @@ import javax.annotation.processing.Generated;
 @RestController
 public class Main {
 
-    @GetMapping("/")
-    public String index(){
-        return "MUDOUUUUUUU";
-    }
     public static void main(String[] args) {
 
         SpringApplication.run(Main.class, args);

@@ -108,31 +108,33 @@
                 </p>
 
                 <p>Confira abaixo as <b>listas de Agentes disponiveis:</b></p>
+                <p>OBS.: Caso não queira digitar na URL fazemos isso pra você, <b>basta clicar no nome do agente
+                e te direcionamos para página dele</b></p>
 
                 <h5>Agentes</h5>
                 <ul>
-                    <li>Brimstone</li>
-                    <li>Phoenix</li>
-                    <li>Sage</li>
-                    <li>Sova</li>
-                    <li>Viper</li>
-                    <li>Cypher</li>
-                    <li>Reyna</li>
-                    <li>Killjoy</li>
-                    <li>Breach</li>
-                    <li>Omen</li>
-                    <li>Jett</li>
-                    <li>Raze</li>
-                    <li>Skye</li>
-                    <li>Yoru</li>
-                    <li>Astra</li>
-                    <li>KAY/O</li>
-                    <li>Chamber</li>
-                    <li>Neon</li>
-                    <li>Fade</li>
-                    <li>Harbor</li>
-                    <li>Gekko</li>
-                    <li>Deadlock</li>
+                    <li><a th:href="${serverUrl} +'agente=Brimstone'">Brimstone</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Phoenix'">Phoenix</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Sage'">Sage</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Sova'">Sova</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Viper'">Viper</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Cypher'">Cypher</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Reyna'">Reyna</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Killjoy'">Killjoy</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Breach'">Breach</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Omen'">Omen</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Jett'">Jett</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Raze'">Raze</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Skye'">Skye</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Yoru'">Yoru</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Astra'">Astra</a></li>
+                    <li><a th:href="${serverUrl} +'agente=KAYO'">KAYO</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Chamber'">Chamber</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Neon'">Neon</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Fade'">Fade</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Harbor'">Harbor</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Gekko'">Gekko</a></li>
+                    <li><a th:href="${serverUrl} +'agente=Deadlock'">Deadlock</a></li>
                 </ul>
 
 
@@ -144,18 +146,18 @@
 
                                 <p>Digite na Barra de Busca:</p>
                                 <p>
-                                <div class="alert alert-dark" role="alert" style="width: 60%;">
-                                    <code style="color: black">localhost:6020/agente=nomeDoAgente</code>
-                                </div>
+                                    <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                        <code style="color: black"th:text="${serverUrl} + 'agente=nomeDoAgente'"></code>
+                                    </div>
                                 </p>
 
                                 <p><i>Exemplo:</i>
                                 <p />
                                 <p>
                                     Para conhecer mais sobre o Gekko , digite:
-                                <div class="alert alert-dark" role="alert" style="width: 60%;">
-                                    <code style="color: black">localhost:6020/agente=gekko</code>
-                                </div>
+                                    <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                        <code style="color: black"th:text="${serverUrl} + 'agente=gekko'"></code>
+                                    </div>
                                 </p>
 
                             </li>
@@ -210,8 +212,8 @@
 
                             <p>Digite na Barra de Busca:</p>
                             <p>
-                            <div class="alert alert-dark" role="alert" style="width: 50%;">
-                                <code style="color: black">localhost:6020/funcao&amp;mapa</code>
+                            <div class="alert alert-dark" role="alert" style="width: 60%;">
+                            <code style="color: black" th:text="${serverUrl} + 'funcao&amp;mapa'"></code>
                             </div>
                             </p>
 
@@ -219,9 +221,9 @@
                             <p />
                             <p>
                                 Para escolher um Controlador no mapa Split , digite:
-                            <div class="alert alert-dark" role="alert" style="width: 50%;">
-                                <code style="color: black">localhost:6020/controlador&amp;split</code>
-                            </div>
+                                <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                    <code style="color: black" th:text="${serverUrl} + 'controlador&amp;split'"></code>
+                                </div>
                             </p>
 
 

@@ -15,8 +15,12 @@ import java.util.List;
 @RequestMapping
 public class HomeController {
 
-    @GetMapping("/index")
-    public String index() {
+    @GetMapping("/")
+    public String index(ModelMap model) {
+        String server = "http://localhost:6020/";
+
+        model.addAttribute("serverUrl", server);
+
         return "index";
     }
 
