@@ -29,7 +29,7 @@
 
     <section>
         <h2>Descrição do Projeto</h2>
-        <p>Esse projeto tem o objetivo de utilizar as rotas de uma aplicação Spring Boot
+        <p>Esse projeto tem o objetivo de utilizar as rotas de uma aplicação Spring Boot com Thymeleaf
             para coletar e processar dados, através da url do navegador.</p>
     </section>
 
@@ -67,25 +67,21 @@
         <hr>
 
         <article>
-            <h3>Calcular a média de duas Provas</h3>
-            <p>Calculo da média de duas provas bimestais para saber a nota final de um aluno no semestre.</p>
+            <h3>Fotografia e os seus diferentes ramos</h3>
+            <p>É comum as pessoas pensarem que sabem um pouco sobre fotografia, mas o que muitas delas não percebem é que a fotografia abrange diversos ramos, muitos dos quais são desconhecidos ou não são reconhecidos como pertencentes a essa categoria.</p>
 
+            <p>Esta página abordará esse assunto. E no final da página, você pode encontrar seleções para cada ramo da fotografia, permitindo que o conteúdo relacionado seja exibido.</p>
             <ol>
-                <h4>Para Calcular a média das provas basta seguir os passos abaixo:</h4>
+                <h4>Para Acessa-la: </h4>
                 <li>
                     <p>Digite na Barra de Busca:</p>
-                    <p><code>localhost:4500/media/EscrevaValorDaProva1/EscrevaValorDaProva2</code></p>
-
-                    <p><i>Exemplo:</i>
-                    <p />
-                    <p>
-                        Para a prova1: 6.4 e prova2: 7.5 , digite:
-                        <code>localhost:4500/media/6.4/7.5</code>
-                    </p>
-                    <p><strong>Obs.:</strong> Para digitar o valor da prova1 e da prova2, utilize o ponto (.) em vez
-                        da vírgula (,) e ( / ) para separar ambos os valores. Por favor</p>
+                    <p><code>http://localhost:6020/fotografia</code></p>
                 </li>
                 <li>Pressione <strong>ENTER</strong></li>
+                <br>
+                <p><i>Ou clicando no link :</i>
+                    <a th:href="@{/fotografia}"><strong>Clique aqui</strong></a>
+                </p>
             </ol>
         </article>
 

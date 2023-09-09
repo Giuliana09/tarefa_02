@@ -1,13 +1,13 @@
 package br.com.tarefa_02.controller;
 
+import br.com.tarefa_02.OpcaoModel.OpcaoModel;
 import br.com.tarefa_02.model.selecaoAgentesValorant.Agente;
 import br.com.tarefa_02.model.selecaoAgentesValorant.AgenteDados;
 import br.com.tarefa_02.model.selecaoAgentesValorant.Selecao;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,8 +27,18 @@ public class HomeController {
     @GetMapping("/meuPlayer")
     public String meuPlayer() {return "meuPlayer";  }
 
-    @GetMapping("/pg2")
-    public String pg2() {
+    @GetMapping("/fotografia")
+    public String pg2(Model model) {
+        OpcaoModel opcaoModel = new OpcaoModel();
+        model.addAttribute("opcaoModel", opcaoModel);
+        return "pg2";
+    }
+    @PostMapping("/fotografia")
+    public String processarSelecao(@ModelAttribute OpcaoModel opcaoModel, Model model) {
+        String opcaoSelecionada = opcaoModel.getOpcaoSelecionada();
+
+        model.addAttribute("opcaoModel.opcaoSelecionada", opcaoSelecionada);
+
         return "pg2";
     }
 
