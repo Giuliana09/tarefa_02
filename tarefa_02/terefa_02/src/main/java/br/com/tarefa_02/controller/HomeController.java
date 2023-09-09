@@ -20,8 +20,8 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/pg1")
-    public String pg1() {return "pg1";  }
+    @GetMapping("/meuPlayer")
+    public String meuPlayer() {return "meuPlayer";  }
 
     @GetMapping("/pg2")
     public String pg2() {

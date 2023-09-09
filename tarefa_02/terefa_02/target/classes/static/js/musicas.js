@@ -1,14 +1,18 @@
 export default [
     {
         src: "./musicas/DuckInTheAlley_TrackTribe.mp3",
-        name: "DuckInTheAlley_TrackTribe",
+        name: "Duck In The Alley - TrackTribe",
     },
     {
         src: "./musicas/Lights_PatrickPatrikios.mp3",
-        name: "Lights_PatrickPatrikios",
+        name: "Lights - Patrick Patrikios",
     },
     {
         src: "./musicas/Ringside_Dyalla.mp3",
-        name: "Ringside_Dyalla",
+        name: "Ringside - Dyalla",
+    },
+    {
+        src: "./musicas/Pray_AnnoDominiBeats.mp3",
+        name: "Pray - Anno Domini Beats",
     },
 ];
