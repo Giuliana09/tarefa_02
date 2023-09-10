@@ -17,7 +17,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(ModelMap model) {
-        String server = "http://localhost:6020/";
+        String server = "http://localhost:5000/";
 
         model.addAttribute("serverUrl", server);
 

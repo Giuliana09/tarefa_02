@@ -29,8 +29,7 @@
 
     <section>
         <h2>Descrição do Projeto</h2>
-        <p>Esse projeto tem o objetivo de utilizar as rotas de uma aplicação Spring Boot com Thymeleaf
-            para coletar e processar dados, através da url do navegador.</p>
+        <p>Esse projeto tem o objetivo de utilizar as rotas de uma aplicação Spring Boot com Thymeleaf</p>
     </section>
 
     <hr>
@@ -75,7 +74,7 @@
                 <h4>Para Acessa-la: </h4>
                 <li>
                     <p>Digite na Barra de Busca:</p>
-                    <p><code>http://localhost:6020/fotografia</code></p>
+                    <p><code th:text="${serverUrl} + 'fotografia'"></code></p>
                 </li>
                 <li>Pressione <strong>ENTER</strong></li>
                 <br>
