@@ -17,7 +17,7 @@
     <h1>Página Principal</h1>
 </header>
 
-<main>
+<main class="container">
     <section>
         <h2>Integrantes do Grupo</h2>
         <ul>
@@ -36,30 +36,39 @@
     <hr>
 
     <section>
-        <h2>Rotas do Projeto</h2>
-
         <article>
-            <h3>Saudação ao Usuário</h3>
-            <p>Mostra uma mensagem de boas vindas ao usuário
-                e conta a quantidade de letras que tem no nome e sobrenome digitados.
-            </p>
+            <h2>Temática - Player de Músicas</h2>
+            <div>
+                <p>Às vezes, você quer dançar ao som de uma batida contagiante, e outras vezes, você quer apenas se envolver
+                    nas letras profundas de uma balada emotiva. A música é a trilha sonora da nossa vida e nos traz muitos benefícios:
+                </p>
+                <ul>
+                    <li> Estimula a criatividade</li>
+                    <li> Ajuda a relaxar</li>
+                    <li> Aumenta a concentração</li>
+                    <li> Diminui o estress</li>
+                </ul>
 
-            <ol>
-                <h4>Para receber a mensagem, basta seguir os passos abaixo:</h4>
-                <li>
-                    <p>Digite na Barra de Busca:</p>
-                    <p><code>localhost:4500/saudacao/{seuNome}_{seuSobrenome}</code></p>
+                <p>Eu uso a música para tudo! Descansar, Festejar, Focar e por isso separei alguns ritmos que eu gosto
+                    aqui para você ouvir e me conhecer um pouco mais!
+                </p>
+                <p>Aproveite!</p>
+            </div>
+            <div>
+                <h5>Tutorial:</h5>
+                <ol>
+                    <li>
+                        <p>Digite na Barra de Busca:</p>
+                        <div class="alert alert-dark" role="alert" style="width: 60%;">
+                            <code style="color: black" th:text="${serverUrl} + 'pg1'"></code>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Pressione <strong>ENTER</strong></span>
+                    </li>
+                </ol>
+            </div>
 
-                    <p><i>Exemplo:</i>
-                    <p />
-                    <p>digite:
-                        <code>localhost:4500/saudacao/Fulano/Camargo</code>
-                    </p>
-
-                    <p><strong>Obs.:</strong> Utilize ( _ )underline para separar ambos os valores. Por favor</p>
-                </li>
-                <li>Pressione <strong>ENTER</strong></li>
-            </ol>
         </article>
 
         <hr>
