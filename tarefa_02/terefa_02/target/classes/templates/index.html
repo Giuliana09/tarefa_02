@@ -13,7 +13,7 @@
 
 <body>
 
-<header>
+<header class="container">
     <h1>Página Principal</h1>
 </header>
 
@@ -39,8 +39,10 @@
         <article>
             <h2>Temática - Player de Músicas</h2>
             <div>
-                <p>Às vezes, você quer dançar ao som de uma batida contagiante, e outras vezes, você quer apenas se envolver
-                    nas letras profundas de uma balada emotiva. A música é a trilha sonora da nossa vida e nos traz muitos benefícios:
+                <p>Às vezes, você quer dançar ao som de uma batida contagiante, e outras vezes, você quer apenas se
+                    envolver
+                    nas letras profundas de uma balada emotiva. A música é a trilha sonora da nossa vida e nos traz
+                    muitos benefícios:
                 </p>
                 <ul>
                     <li> Estimula a criatividade</li>
@@ -54,19 +56,25 @@
                 </p>
                 <p>Aproveite!</p>
             </div>
-            <div>
-                <h5>Tutorial:</h5>
-                <ol>
-                    <li>
-                        <p>Digite na Barra de Busca:</p>
-                        <div class="alert alert-dark" role="alert" style="width: 60%;">
-                            <code style="color: black" th:text="${serverUrl} + 'pg1'"></code>
-                        </div>
-                    </li>
-                    <li>
-                        <span>Pressione <strong>ENTER</strong></span>
-                    </li>
-                </ol>
+
+            <div class="jumbotron jumbotron-fluid" style="width: 60%;">
+                <div class="container">
+                    <h5>Tutorial:</h5>
+                    <ol>
+                        <li>
+                            <p>Digite na Barra de Busca:</p>
+                            <div class="alert alert-dark" role="alert" style="width: 60%;">
+                                <code style="color: black" th:text="${serverUrl} + 'pg1'"></code>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Pressione <strong>ENTER</strong></span>
+                        </li>
+                        <p><i>Ou clicando no link :</i>
+                            <a th:href="@{/pg1}"><strong>Clique aqui</strong></a>
+                        </p>
+                    </ol>
+                </div>
             </div>
 
         </article>
@@ -76,21 +84,28 @@
 
         <article>
             <h3>Fotografia e os seus diferentes ramos</h3>
-            <p>É comum as pessoas pensarem que sabem um pouco sobre fotografia, mas o que muitas delas não percebem é que a fotografia abrange diversos ramos, muitos dos quais são desconhecidos ou não são reconhecidos como pertencentes a essa categoria.</p>
+            <p>É comum as pessoas pensarem que sabem um pouco sobre fotografia, mas o que muitas delas não percebem é
+                que a fotografia abrange diversos ramos, muitos dos quais são desconhecidos ou não são reconhecidos como
+                pertencentes a essa categoria.</p>
 
-            <p>Esta página abordará esse assunto. E no final da página, você pode encontrar seleções para cada ramo da fotografia, permitindo que o conteúdo relacionado seja exibido.</p>
-            <ol>
-                <h4>Para Acessa-la: </h4>
-                <li>
-                    <p>Digite na Barra de Busca:</p>
-                    <p><code th:text="${serverUrl} + 'fotografia'"></code></p>
-                </li>
-                <li>Pressione <strong>ENTER</strong></li>
-                <br>
-                <p><i>Ou clicando no link :</i>
-                    <a th:href="@{/fotografia}"><strong>Clique aqui</strong></a>
-                </p>
-            </ol>
+            <p>Esta página abordará esse assunto. E no final da página, você pode encontrar seleções para cada ramo da
+                fotografia, permitindo que o conteúdo relacionado seja exibido.</p>
+            <div class="jumbotron jumbotron-fluid" style="width: 60%;">
+                <ol>
+                    <h4>Para Acessa-la: </h4>
+                    <li>
+                        <p>Digite na Barra de Busca:</p>
+                        <div class="alert alert-dark" role="alert" style="width: 80%;">
+                            <code style="color: black" th:text="${serverUrl} + 'fotografia'"></code>
+                        </div>
+                    </li>
+                    <li>Pressione <strong>ENTER</strong></li>
+                    <br>
+                    <p><i>Ou clicando no link :</i>
+                        <a th:href="@{/fotografia}"><strong>Clique aqui</strong></a>
+                    </p>
+                </ol>
+            </div>
         </article>
 
         <hr>
@@ -113,7 +128,7 @@
 
                 <p>Confira abaixo as <b>listas de Agentes disponiveis:</b></p>
                 <p>OBS.: Caso não queira digitar na URL fazemos isso pra você, <b>basta clicar no nome do agente
-                e te direcionamos para página dele</b></p>
+                    e te direcionamos para página dele</b></p>
 
                 <h5>Agentes</h5>
                 <ul>
@@ -150,18 +165,18 @@
 
                                 <p>Digite na Barra de Busca:</p>
                                 <p>
-                                    <div class="alert alert-dark" role="alert" style="width: 60%;">
-                                        <code style="color: black"th:text="${serverUrl} + 'agente=nomeDoAgente'"></code>
-                                    </div>
+                                <div class="alert alert-dark" role="alert" style="width: 80%;">
+                                    <code style="color: black" th:text="${serverUrl} + 'agente=nomeDoAgente'"></code>
+                                </div>
                                 </p>
 
                                 <p><i>Exemplo:</i>
-                                <p />
+                                <p/>
                                 <p>
                                     Para conhecer mais sobre o Gekko , digite:
-                                    <div class="alert alert-dark" role="alert" style="width: 60%;">
-                                        <code style="color: black"th:text="${serverUrl} + 'agente=gekko'"></code>
-                                    </div>
+                                <div class="alert alert-dark" role="alert" style="width: 80%;">
+                                    <code style="color: black" th:text="${serverUrl} + 'agente=gekko'"></code>
+                                </div>
                                 </p>
 
                             </li>
@@ -208,7 +223,7 @@
                 <li>Iniciador</li>
             </ol>
 
-            <div class="jumbotron jumbotron-fluid" style="width: 50%;">
+            <div class="jumbotron jumbotron-fluid" style="width: 60%;">
                 <div class="container">
                     <h5>Tutorial:</h5>
                     <ol>
@@ -216,18 +231,18 @@
 
                             <p>Digite na Barra de Busca:</p>
                             <p>
-                            <div class="alert alert-dark" role="alert" style="width: 60%;">
-                            <code style="color: black" th:text="${serverUrl} + 'funcao&amp;mapa'"></code>
+                            <div class="alert alert-dark" role="alert" style="width: 80%;">
+                                <code style="color: black" th:text="${serverUrl} + 'funcao&amp;mapa'"></code>
                             </div>
                             </p>
 
                             <p><i>Exemplo:</i>
-                            <p />
+                            <p/>
                             <p>
                                 Para escolher um Controlador no mapa Split , digite:
-                                <div class="alert alert-dark" role="alert" style="width: 60%;">
-                                    <code style="color: black" th:text="${serverUrl} + 'controlador&amp;split'"></code>
-                                </div>
+                            <div class="alert alert-dark" role="alert" style="width: 80%;">
+                                <code style="color: black" th:text="${serverUrl} + 'controlador&amp;split'"></code>
+                            </div>
                             </p>
 
 
