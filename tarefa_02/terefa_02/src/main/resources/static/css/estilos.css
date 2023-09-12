@@ -3,25 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.sobre{
-    width:40%;
-    text-align: justify;
-    line-height: 30px;
-    margin: 30px; 
-    font-size: 20px; 
-}
-
-.sobre ul{
-    margin: 10px 30px 10px 35px;
-}
-
 .container {
     display: flex;
     align-items: center;
@@ -35,7 +21,6 @@ main {
     padding: 10px;
     border-radius: 5px;
 }
-
 .logo {
     background-color: #ec8d8d;
     width: 100%;
@@ -45,64 +30,33 @@ main {
     justify-content: center;
     border-radius: 5px;
 }
-
 .logo i {
     font-size: 200px;
 }
-
-.nomeMusica{
+#nomeMusica{
     white-space: nowrap;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
-
 .controles button{
     border: none;
     background-color: #fff;
     cursor: pointer;
 }
-
 .controles i{
     font-size: 60px;
     padding: 5px;
     border-radius: 50%;
     transition: all .2s;
 }
-
 .controles i:hover{
     background-color: #b6b0b0;
 }
 
-.tocando{
-    width: 100%;
-}
-
-.barraProgresso{
-    height: 8px;
-    background-color: #df9090;
-    cursor: pointer;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-.progresso{
-    height: 8px;
-    background-color: #333;
-    border-radius: 5px;
-}
-
-.tempo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.tempo span{
-    font-size: 22px;
-    color:#333;
-}
 
 
   

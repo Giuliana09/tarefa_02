@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" th:href="@{/css/estilos.css}">
   <title>Player de Musica</title>
 </head>
 <body>
@@ -13,19 +13,19 @@
         <div class="logo">
           <i class='bx bxs-music'></i>
         </div>
-        <span id="nomeMusica"></span>
+        <span id="nomeMusica" th:text="${nomeMusica}"></span>
 
-        <audio id="play" src=""></audio> <!--irá conter a música atual-->
+        <audio id="play" th:text="${play}" src=""></audio> <!--irá conter a música atual-->
 
         <div class="controles">
           <button id="botaoVoltar"><i class='bx bxs-skip-previous-circle'></i></button>
-          <button id="botaoPlayPause"><i class='bx bx-play-circle'></i></button>
+          <button id="botaoPlayPause" th:text="${botaoPlayPause}"><i class='bx bx-play-circle'></i></button>
           <button id="botaoAvancar"><i class='bx bxs-skip-next-circle'></i></i></button>
         </div>
     </div>
   </main>
 
-  <script type="module" src="/js/logica.js"></script>
+  <script type="module" th:src="@{/js/logica.js}"></script>
 </body>
 
 </html>
