@@ -4,213 +4,196 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Fotografia</title>
 </head>
-<body style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 20px">
-<h1>Fotografia e os seus diferentes ramos</h1>
+<body>
+  <h1>Fotografia e os seus diferentes ramos</h1>
 
-<p>É absolutamente normal que as pessoas tenham uma compreensão superficial ou limitada sobre a fotografia e não percebam a diversidade de ramos e subcategorias que ela abrange. A fotografia é um campo vasto e multifacetado, e muitos de seus ramos são altamente especializados, com técnicas e conhecimentos específicos.</p>
+  <p>É absolutamente normal que as pessoas tenham uma compreensão superficial ou limitada sobre a fotografia e não percebam a diversidade de ramos e subcategorias que ela abrange. A fotografia é um campo vasto e multifacetado, e muitos de seus ramos são altamente especializados, com técnicas e conhecimentos específicos.</p>
 
-<p>Pessoas podem estar familiarizadas com os tipos de fotografia mais comuns, como retratos, paisagens e fotos de eventos, mas podem não ter conhecimento dos muitos outros nichos e estilos que existem. Alguns exemplos de ramos menos conhecidos incluem:</p>
+  <p>Pessoas podem estar familiarizadas com os tipos de fotografia mais comuns, como retratos, paisagens e fotos de eventos, mas podem não ter conhecimento dos muitos outros nichos e estilos que existem. Alguns exemplos de ramos menos conhecidos incluem:</p>
 
-<ul>
-  <li>Fotografia Macrofotografia;</li>
-  <li>Fotografia Microfotografia;</li>
-  <li>Fotografia para bancos de imagens</li>
-  <li>Fotografia de produto</li>
-  <li>Fotografia flat lay</li>
-  <li>Fotografia de animais</li>
-  <li>Fotografia de animais</li>
-</ul>
+  <ul>
+    <li>Fotografia Macrofotografia;</li>
+    <li>Fotografia Microfotografia;</li>
+    <li>Fotografia para bancos de imagens</li>
+    <li>Fotografia de produto</li>
+    <li>Fotografia flat lay</li>
+    <li>Fotografia de animais</li>
+    <li>Fotografia de animais</li>
+  </ul>
 
 
-<p>Para ver alguns exemplos e saber mais sobres elas, basta selecionar uma opção de a cordo com e ramo escolhido: </p>
-<br>
+  <p>Para ver alguns exemplos e saber mais sobres elas, basta selecionar uma opção de a cordo com e ramo escolhido: </p>
+  <br>
 
-<form th:object="${opcaoModel}" th:action="@{/fotografia}" method="post">
-  <select id="opcao" th:field="*{opcaoSelecionada}" style="font-size: 20px">
-    <option value="opcao0">Selecione uma opção</option>
-    <option value="opcao1">Macrofotografia</option>
-    <option value="opcao2">Microfotografia</option>
-    <option value="opcao3">Fotografia para bancos de imagens</option>
-    <option value="opcao4">Fotografia de produto</option>
-    <option value="opcao5">Fotografia flat lay</option>
-    <option value="opcao6">Fotografia de animais</option>
-    <option value="opcao7">Fotografia de vida selvagem</option>
+  <form th:object="${opcaoModel}" th:action="@{/fotografia}" method="post">
+    <select class="selecao" id="opcao" th:field="*{opcaoSelecionada}">
+      <option value="opcao0">Selecione uma opção</option>
+      <option value="opcao1">Macrofotografia</option>
+      <option value="opcao2">Microfotografia</option>
+      <option value="opcao3">Fotografia para bancos de imagens</option>
+      <option value="opcao4">Fotografia de produto</option>
+      <option value="opcao5">Fotografia flat lay</option>
+      <option value="opcao6">Fotografia de animais</option>
+      <option value="opcao7">Fotografia de vida selvagem</option>
+    </select>
 
-  </select>
-  <button type="submit" style="font-size: 20px">Escolher ramo</button>
-</form>
+    <button class="botao" type="submit">Escolher ramo</button>
+  </form>
 
-<!-- Conteúdo a ser exibido/oculto com base na seleção -->
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao1'}">
-  <!-- Conteúdo relacionado à opção 1 -->
+  <!-- Conteúdo a ser exibido/oculto com base na seleção -->
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao1'}">
+    <!-- Conteúdo relacionado à opção 1 -->
 
-  <h3>Macrofotografia</h3>
+    <h3>Macrofotografia</h3>
 
-  <p>A macrofotografia é uma vertente especializada da fotografia que nos convida a explorar o mundo microscópico, revelando detalhes incríveis que geralmente passam despercebidos. Com o uso de lentes macro e técnicas específicas, os fotógrafos podem capturar objetos e <strong>pequenos seres vivos, como insetos, flores e gotas d'água</strong>, em uma escala ampliada, revelando texturas, padrões e intricados detalhes que desafiam a visão comum.</p>
+    <p>A macrofotografia é uma vertente especializada da fotografia que nos convida a explorar o mundo microscópico, revelando detalhes incríveis que geralmente passam despercebidos. Com o uso de lentes macro e técnicas específicas, os fotógrafos podem capturar objetos e <strong>pequenos seres vivos, como insetos, flores e gotas d'água</strong>, em uma escala ampliada, revelando texturas, padrões e intricados detalhes que desafiam a visão comum.</p>
 
-  <p>Essa forma de fotografia exige paciência, habilidade técnica e criatividade, pois a profundidade de campo é tipicamente muito rasa, tornando crucial o controle preciso do foco e da iluminação. A macrofotografia nos convida a olhar mais de perto o mundo que nos rodeia e nos surpreende com a beleza e complexidade que se escondem nas pequenas coisas. É uma jornada de descoberta visual que nos leva a apreciar a extraordinária riqueza de detalhes que existe em nosso ambiente cotidiano</p>
+    <p>Essa forma de fotografia exige paciência, habilidade técnica e criatividade, pois a profundidade de campo é tipicamente muito rasa, tornando crucial o controle preciso do foco e da iluminação. A macrofotografia nos convida a olhar mais de perto o mundo que nos rodeia e nos surpreende com a beleza e complexidade que se escondem nas pequenas coisas. É uma jornada de descoberta visual que nos leva a apreciar a extraordinária riqueza de detalhes que existe em nosso ambiente cotidiano</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure >
-      <img src="/img/fotografia/Macro/brizadly-arifin-7GYkCOO_9T8-unsplash.jpg" alt="libelula" height="500" >
-      <figure>fotografia - brizadly-arifin/unsplash</figure>
+    <figure class="foto">
+      <img src="/img/fotografia/Macro/brizadly-arifin-7GYkCOO_9T8-unsplash-min.jpg" alt="libelula">
+      <img src="/img/fotografia/Macro/sanni-sahil-lBAhTW1AjOU-unsplash.jpg" alt="goticula">
     </figure>
 
-    <figure >
-      <img src="/img/fotografia/Macro/sanni-sahil-lBAhTW1AjOU-unsplash.jpg" alt="goticula" height="500">
-      <figure>fotografia - sanni-sahil/unsplash</figure>
-    </figure>
+    <div class="foto">
+      <figcaption class="foto">fotografia - brizadly-arifin/unsplash </figcaption>
+      <figcaption class="foto">fotografia - sanni-sahil/unsplash </figcaption>
+    </div>
   </div>
-</div>
 
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao2'}">
-  <!-- Conteúdo relacionado à opção 2 -->
-  <h3>Microfotografia</h3>
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao2'}">
+    <!-- Conteúdo relacionado à opção 2 -->
+    <h3>Microfotografia</h3>
 
-  <p>A microfotografia é uma forma avançada da arte da fotografia que nos leva além dos limites do olho humano, explorando o universo microscópico. Utilizando equipamentos especializados, como microscópios e câmeras de alta resolução, os microfotógrafos capturam imagens de estruturas e objetos minúsculos, muitas vezes <strong>invisíveis a olho nu.</strong> </p>
+    <p>A microfotografia é uma forma avançada da arte da fotografia que nos leva além dos limites do olho humano, explorando o universo microscópico. Utilizando equipamentos especializados, como microscópios e câmeras de alta resolução, os microfotógrafos capturam imagens de estruturas e objetos minúsculos, muitas vezes <strong>invisíveis a olho nu.</strong> </p>
 
-  <p>Essa disciplina requer não apenas habilidades técnicas refinadas, mas também uma compreensão profunda dos assuntos que estão sendo fotografados, como células, minerais, microrganismos e partículas subatômicas. A microfotografia desempenha um papel vital em campos como a pesquisa científica, a medicina e a nanotecnologia, permitindo-nos explorar o mundo oculto que desempenha um papel crucial em nossa compreensão do universo e da vida em si.</p>
+    <p>Essa disciplina requer não apenas habilidades técnicas refinadas, mas também uma compreensão profunda dos assuntos que estão sendo fotografados, como células, minerais, microrganismos e partículas subatômicas. A microfotografia desempenha um papel vital em campos como a pesquisa científica, a medicina e a nanotecnologia, permitindo-nos explorar o mundo oculto que desempenha um papel crucial em nossa compreensão do universo e da vida em si.</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure>
-      <img src="/img/fotografia/Micro/somnath-roy-4nyRQPvRg30-unsplash.jpg" alt="imagem microscopica" height="500">
-      <figure>fotografia - somnath-roy/unsplash</figure>
+    <figure class="foto">
+      <img src="/img/fotografia/Micro/somnath-roy-4nyRQPvRg30-unsplash.jpg" alt="imagem microscopica">
+      <img src="/img/fotografia/Micro/Nikons Small World_3entry24880marine-worm.jpg" alt="pernilongo">
     </figure>
 
-    <figure id="pernilongo">
-      <img src="/img/fotografia/Micro/Nikons Small World_3entry24880marine-worm.jpg" alt="pernilongo" height="400">
-      <figure>fotografia - Nikons Small World</figure>
-    </figure>
+    <div class="foto">
+      <figcaption> fotografia - somnath-roy/unsplash</figcaption>
+      <figcaption>fotografia - Nikons Small World</figcaption>
+    </div>
+
   </div>
-</div>
 
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao3'}">
-  <!-- Conteúdo relacionado à opção 3 -->
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao3'}">
+    <!-- Conteúdo relacionado à opção 3 -->
 
-  <h3>Fotografia para bancos de imagens</h3>
-  <p>A fotografia para bancos de imagens desempenha um papel fundamental na indústria criativa e de comunicação. Fotógrafos especializados em produzir imagens para esses bancos têm a tarefa de capturar momentos, objetos e cenários diversos que atendam às necessidades de uma ampla gama de clientes. Essas imagens são valiosas para publicidade, marketing, mídia, design e muito mais.</p>
+    <h3>Fotografia para bancos de imagens</h3>
+    <p>A fotografia para bancos de imagens desempenha um papel fundamental na indústria criativa e de comunicação. Fotógrafos especializados em produzir imagens para esses bancos têm a tarefa de capturar momentos, objetos e cenários diversos que atendam às necessidades de uma ampla gama de clientes. Essas imagens são valiosas para publicidade, marketing, mídia, design e muito mais.</p>
 
-  <p>A chave para uma boa fotografia de banco de imagens é a versatilidade e a qualidade. Os fotógrafos precisam criar imagens que possam ser adaptadas para diferentes usos e públicos. Isso significa que as fotos devem ser bem compostas, iluminadas adequadamente e ter um apelo visual amplo. Além disso, as imagens devem ser de alta resolução para garantir uma qualidade excelente quando impressas ou usadas em mídia digital.</p>
+    <p>A chave para uma boa fotografia de banco de imagens é a versatilidade e a qualidade. Os fotógrafos precisam criar imagens que possam ser adaptadas para diferentes usos e públicos. Isso significa que as fotos devem ser bem compostas, iluminadas adequadamente e ter um apelo visual amplo. Além disso, as imagens devem ser de alta resolução para garantir uma qualidade excelente quando impressas ou usadas em mídia digital.</p>
 
-  <p>Esses fotógrafos são desafiados a encontrar beleza e significado em uma ampla variedade de assuntos, desde paisagens pitorescas até conceitos abstratos. Eles desempenham um papel vital na criação de um vasto repositório de recursos visuais que enriquecem a comunicação em todo o mundo.</p>
+    <p>Esses fotógrafos são desafiados a encontrar beleza e significado em uma ampla variedade de assuntos, desde paisagens pitorescas até conceitos abstratos. Eles desempenham um papel vital na criação de um vasto repositório de recursos visuais que enriquecem a comunicação em todo o mundo.</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure i>
-      <img src="/img/fotografia/Banco_Imagens/premium_photo-1661721969320-75fa.jpg" alt="moça trabalhando" height="300">
-      <figure>Fotografia - unsplash</figure>
+    <figure class="menor">
+      <img src="/img/fotografia/Banco_Imagens/premium_photo-1661721969320-75fa.jpg" alt="moça trabalhando">
+      <img src="/img/fotografia/Banco_Imagens/premium_photo-1664298540395-1370.jpg" alt="fabrica">
     </figure>
 
-    <figure>
-      <img src="/img/fotografia/Banco_Imagens/premium_photo-1664298540395-1370.jpg" alt="fabrica" height="400">
-      <figure>>Fotografia - unsplash</figure>
-    </figure>
+    <div class="menor">
+      <figcaption>Fotografia - unsplash</figcaption>
+      <figcaption>Fotografia - unsplash</figcaption>
+    </div>
+
   </div>
-</div>
 
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao4'}">
-  <!-- Conteúdo relacionado à opção 4 -->
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao4'}">
+    <!-- Conteúdo relacionado à opção 4 -->
 
-  <h3>Fotografia de produto</h3>
+    <h3>Fotografia de produto</h3>
 
-  <p>A fotografia de produto é uma disciplina altamente especializada que se concentra em capturar produtos de maneira atraente e informativa. É uma forma de arte essencial para a indústria do comércio eletrônico, marketing e publicidade, pois desempenha um papel crucial na apresentação de produtos aos consumidores.</p>
+    <p>A fotografia de produto é uma disciplina altamente especializada que se concentra em capturar produtos de maneira atraente e informativa. É uma forma de arte essencial para a indústria do comércio eletrônico, marketing e publicidade, pois desempenha um papel crucial na apresentação de produtos aos consumidores.</p>
 
-  <p>O objetivo da fotografia de produto é mostrar os produtos sob sua melhor luz, destacando suas características, detalhes e qualidade de maneira a persuadir os clientes a comprá-los. Para atingir esse objetivo, os fotógrafos de produtos utilizam técnicas de iluminação cuidadosamente planejadas, fundos neutros ou contextuais, composição equilibrada e, muitas vezes, técnicas de pós-processamento para aprimorar a imagem.</p>
+    <p>O objetivo da fotografia de produto é mostrar os produtos sob sua melhor luz, destacando suas características, detalhes e qualidade de maneira a persuadir os clientes a comprá-los. Para atingir esse objetivo, os fotógrafos de produtos utilizam técnicas de iluminação cuidadosamente planejadas, fundos neutros ou contextuais, composição equilibrada e, muitas vezes, técnicas de pós-processamento para aprimorar a imagem.</p>
 
-  <p>Essa forma de fotografia é altamente especializada, pois exige um profundo entendimento da estética, da marca e do público-alvo do produto. Além disso, é comum que fotógrafos de produtos trabalhem em estreita colaboração com designers e profissionais de marketing para garantir que a imagem do produto se alinhe com a estratégia de marketing da empresa.</p>
+    <p>Essa forma de fotografia é altamente especializada, pois exige um profundo entendimento da estética, da marca e do público-alvo do produto. Além disso, é comum que fotógrafos de produtos trabalhem em estreita colaboração com designers e profissionais de marketing para garantir que a imagem do produto se alinhe com a estratégia de marketing da empresa.</p>
 
-  <p>A fotografia de produto é uma ferramenta poderosa para influenciar as decisões de compra dos consumidores, pois permite que eles vejam os produtos de maneira detalhada e realista, mesmo quando compram online. É um campo que se tornou ainda mais crucial com o crescimento do comércio eletrônico e das mídias sociais, onde a apresentação visual desempenha um papel significativo na decisão de compra.</p>
+    <p>A fotografia de produto é uma ferramenta poderosa para influenciar as decisões de compra dos consumidores, pois permite que eles vejam os produtos de maneira detalhada e realista, mesmo quando compram online. É um campo que se tornou ainda mais crucial com o crescimento do comércio eletrônico e das mídias sociais, onde a apresentação visual desempenha um papel significativo na decisão de compra.</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure>
-      <img src="/img/fotografia/produtos/alex-lvrs-mTw_GePuRUE-unsplash.jpg" alt="linha completa de um produto" height="500">
-      <figure>Fotografia - alex-lvrs/ unsplash</figure>
+    <figure class="foto">
+      <img src="/img/fotografia/produtos/alex-lvrs-mTw_GePuRUE-unsplash.jpg" alt="linha completa de um produto">
+      <img src="/img/fotografia/produtos/cierra-henderson-LWIQp-0_b98-unsplash.jpg" alt="um produto">
     </figure>
 
-    <figure>
-      <img src="img/fotografia/produtos/cierra-henderson-LWIQp-0_b98-unsplash.jpg" alt="um produto" height="500">
-      <figure>Fotografia - cierra-henderson/unsplash</figure>
-    </figure>
+    <div class="foto">
+      <figcaption>Fotografia - alex-lvrs/ unsplash</figcaption>
+      <figcaption>Fotografia - cierra-henderson/unsplash</figcaption>
+    </div>
+
   </div>
-</div>
 
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao5'}">
-  <!-- Conteúdo relacionado à opção 5 -->
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao5'}">
+    <!-- Conteúdo relacionado à opção 5 -->
 
-  <h3>Fotografia flat lay</h3>
+    <h3>Fotografia flat lay</h3>
 
-  <p>A fotografia "flat lay" é uma técnica visualmente cativante que se concentra na captura de objetos dispostos de maneira organizada e estilizada em uma superfície plana, geralmente vista de cima. Essa abordagem cria composições visualmente atraentes e equilibradas que são amplamente usadas em mídias sociais, design gráfico, publicidade e blogs.</p>
+    <p>A fotografia "flat lay" é uma técnica visualmente cativante que se concentra na captura de objetos dispostos de maneira organizada e estilizada em uma superfície plana, geralmente vista de cima. Essa abordagem cria composições visualmente atraentes e equilibradas que são amplamente usadas em mídias sociais, design gráfico, publicidade e blogs.</p>
 
-  <p>Nas fotografias flat lay, a escolha dos objetos, a paleta de cores, a disposição e a iluminação desempenham um papel fundamental. Fotógrafos e criadores de conteúdo frequentemente usam essa técnica para criar imagens que contam histórias, comunicam conceitos ou exibem produtos de maneira artística.</p>
+    <p>Nas fotografias flat lay, a escolha dos objetos, a paleta de cores, a disposição e a iluminação desempenham um papel fundamental. Fotógrafos e criadores de conteúdo frequentemente usam essa técnica para criar imagens que contam histórias, comunicam conceitos ou exibem produtos de maneira artística.</p>
 
-  <p>A versatilidade da fotografia flat lay permite que ela seja aplicada em uma variedade de contextos, desde a criação de composições minimalistas e elegantes até cenários mais elaborados e temáticos. É uma forma de expressão visual que permite aos artistas e criadores compartilhar sua criatividade e narrativa de maneira acessível e impactante, tornando-a uma ferramenta poderosa na comunicação contemporânea.</p>
+    <p>A versatilidade da fotografia flat lay permite que ela seja aplicada em uma variedade de contextos, desde a criação de composições minimalistas e elegantes até cenários mais elaborados e temáticos. É uma forma de expressão visual que permite aos artistas e criadores compartilhar sua criatividade e narrativa de maneira acessível e impactante, tornando-a uma ferramenta poderosa na comunicação contemporânea.</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure>
-      <img src="/img/fotografia/flat_lay/jess-bailey-q10VITrVYUM-unsplash.jpg" alt="Mesa de estudo" height="400">
-      <figure>Fotografia - jess-bailey/unsplash</figure>
+    <figure class="menor">
+      <img src="/img/fotografia/flat_lay/jess-bailey-q10VITrVYUM-unsplash.jpg" alt="Mesa de estudo">
+      <img src="/img/fotografia/flat_lay/thought-catalog-505eectW54k-unsplash.jpg" alt="Mesa de trabalho">
     </figure>
 
-    <figure>
-      <img src="/img/fotografia/flat_lay/thought-catalog-505eectW54k-unsplash.jpg" alt="Mesa de trabalho" height="400">
-      <figure>Fotografia - thought-catalog/unsplash</figure>
-    </figure>
+    <div class="menor">
+      <figcaption>Fotografia - jess-bailey/unsplash</figcaption>
+      <figcaption>Fotografia - thought-catalog/unsplash</figcaption>
+    </div>
+
   </div>
-</div>
 
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao6'}">
-  <!-- Conteúdo relacionado à opção 6 -->
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao6'}">
+    <!-- Conteúdo relacionado à opção 6 -->
 
-  <h3>Fotografia de animais</h3>
-  <p>A fotografia de animais abrange uma ampla gama de imagens que incluem animais em diferentes cenários, não necessariamente em seu ambiente natural. Isso pode incluir animais de estimação, como cães e gatos, animais domésticos e animais em cativeiro, como aqueles encontrados em zoológicos ou fazendas. A fotografia de animais se concentra em capturar a personalidade, o comportamento e a relação entre os animais e seus donos ou cuidadores.</p>
+    <h3>Fotografia de animais</h3>
+    <p>A fotografia de animais abrange uma ampla gama de imagens que incluem animais em diferentes cenários, não necessariamente em seu ambiente natural. Isso pode incluir animais de estimação, como cães e gatos, animais domésticos e animais em cativeiro, como aqueles encontrados em zoológicos ou fazendas. A fotografia de animais se concentra em capturar a personalidade, o comportamento e a relação entre os animais e seus donos ou cuidadores.</p>
 
-  <p>Em resumo, a fotografia de animais se destaca por destacar a relação entre seres humanos e animais, muitas vezes em ambientes controlados e com um foco especial na expressão e personalidade dos animais. É uma forma de fotografia que celebra a conexão entre humanos e seus companheiros animais, criando imagens que são emotivas, carinhosas e muitas vezes muito pessoais.</p>
+    <p>Em resumo, a fotografia de animais se destaca por destacar a relação entre seres humanos e animais, muitas vezes em ambientes controlados e com um foco especial na expressão e personalidade dos animais. É uma forma de fotografia que celebra a conexão entre humanos e seus companheiros animais, criando imagens que são emotivas, carinhosas e muitas vezes muito pessoais.</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure>
-      <img src="/img/fotografia/Animais/oleg-ivanov-TtjElwlsYDc-unsplash.jpg" alt="Moça deitada com seu gato" height="400">
-      <figure>Fotografia - oleg-ivanov/unsplash</figure>
+    <figure class="menor">
+      <img src="/img/fotografia/Animais/oleg-ivanov-TtjElwlsYDc-unsplash.jpg" alt="Moça deitada com seu gato">
+      <img src="/img/fotografia/Animais/richard-brutyo-xvYxGcwFvuE-unsplash.jpg" alt="Moça na rua com seu cão">
     </figure>
 
-    <figure>
-      <img src="/img/fotografia/Animais/richard-brutyo-xvYxGcwFvuE-unsplash.jpg" alt="Moça na rua com seu cão" height="400">
-      <figure>Fotografia - richard-brutyo/unsplash</figure>
-    </figure>
+    <div class="menor">
+      <figcaption>Fotografia - oleg-ivanov/unsplash</figcaption>
+      <figcaption>Fotografia - richard-brutyo/unsplash</figcaption>
+    </div>
   </div>
-</div>
 
-<div th:if="${opcaoModel.opcaoSelecionada == 'opcao7'}">
-  <!-- Conteúdo relacionado à opção 7 -->
+  <div th:if="${opcaoModel.opcaoSelecionada == 'opcao7'}">
+    <!-- Conteúdo relacionado à opção 7 -->
 
-  <h3>Fotografia de vida selvagem</h3>
+    <h3>Fotografia de vida selvagem</h3>
 
-  <p>A fotografia de vida selvagem é uma disciplina fascinante que captura a beleza e a diversidade dos animais em seu habitat natural. Os fotógrafos de vida selvagem embarcam em aventuras emocionantes para registrar momentos únicos da vida animal, desde grandes predadores até aves exóticas e criaturas maravilhosas.</p>
+    <p>A fotografia de vida selvagem é uma disciplina fascinante que captura a beleza e a diversidade dos animais em seu habitat natural. Os fotógrafos de vida selvagem embarcam em aventuras emocionantes para registrar momentos únicos da vida animal, desde grandes predadores até aves exóticas e criaturas maravilhosas.</p>
 
-  <p>Essa forma de fotografia exige não apenas habilidades técnicas, como o domínio da exposição e a capacidade de escolher as melhores configurações de câmera para cada situação, mas também uma profunda compreensão do comportamento animal. A paciência é uma virtude essencial, pois os fotógrafos muitas vezes esperam por horas, dias ou até semanas para capturar o momento perfeito.</p>
+    <p>Essa forma de fotografia exige não apenas habilidades técnicas, como o domínio da exposição e a capacidade de escolher as melhores configurações de câmera para cada situação, mas também uma profunda compreensão do comportamento animal. A paciência é uma virtude essencial, pois os fotógrafos muitas vezes esperam por horas, dias ou até semanas para capturar o momento perfeito.</p>
 
-  <p>A fotografia de vida selvagem não é apenas sobre belas imagens; também desempenha um papel importante na conservação. Ao expor o público à beleza da vida selvagem e aos desafios que enfrentam, os fotógrafos de vida selvagem ajudam a criar consciência sobre a necessidade de proteger os habitats naturais e as espécies em risco de extinção.</p>
+    <p>A fotografia de vida selvagem não é apenas sobre belas imagens; também desempenha um papel importante na conservação. Ao expor o público à beleza da vida selvagem e aos desafios que enfrentam, os fotógrafos de vida selvagem ajudam a criar consciência sobre a necessidade de proteger os habitats naturais e as espécies em risco de extinção.</p>
 
-  <div id="foto" style="display: flex; ">
-
-    <figure>
-      <img src="/img/fotografia/Selvagens/ahmed-galal-TlhrinkHoB4-unsplash.jpg" alt="guepardo em cima de uma arvore" height="500">
-      <figure>Fotografia - ahmed-galal/unsplash</figure>
+    <figure class="foto">
+      <img src="/img/fotografia/Selvagens/ahmed-galal-TlhrinkHoB4-unsplash.jpg" alt="guepardo em cima de uma arvore">
+      <img src="/img/fotografia/Selvagens/mohamed-elsayed-wd6YQy0PJt8-unsplash.jpg" alt="Panda Vermelho">
     </figure>
 
-    <figure>
-      <img src="/img/fotografia/Selvagens/mohamed-elsayed-wd6YQy0PJt8-unsplash.jpg" alt="Panda Vermelho" height="500">
-      <figure>Fotografia - mohamed-elsayed/unsplash</figure>
-    </figure>
+    <div class="foto">
+      <figcaption>Fotografia - ahmed-galal/unsplash</figcaption>
+      <figcaption>Fotografia - mohamed-elsayed/unsplash</figcaption>
+    </div>
   </div>
-</div>
 
 </body>
 </html>
