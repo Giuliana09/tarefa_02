@@ -4,6 +4,8 @@ import br.com.tarefa_02.OpcaoModel.OpcaoModel;
 import br.com.tarefa_02.model.selecaoAgentesValorant.Agente;
 import br.com.tarefa_02.model.selecaoAgentesValorant.AgenteDados;
 import br.com.tarefa_02.model.selecaoAgentesValorant.Selecao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -15,20 +17,25 @@ import java.util.List;
 @RequestMapping
 public class HomeController {
 
+    @Autowired
+    @Qualifier("porta")
+    private String porta;
+
     @GetMapping("/")
     public String index(ModelMap model) {
         String server = "http://localhost:5000/";
 
-        model.addAttribute("serverUrl", server);
+        model.addAttribute("serverUrl", porta);
 
         return "index";
     }
 
     @GetMapping("/pg1")
     public String pg1() {
-
         return "pg1";
     }
+
+
 
     @GetMapping("/fotografia")
     public String pg2(Model model) {
