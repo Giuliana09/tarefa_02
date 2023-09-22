@@ -35,8 +35,6 @@ public class HomeController {
         return "pg1";
     }
 
-
-
     @GetMapping("/fotografia")
     public String pg2(Model model) {
         OpcaoModel opcaoModel = new OpcaoModel();
